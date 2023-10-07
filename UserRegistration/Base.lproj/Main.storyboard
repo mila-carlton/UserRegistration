@@ -38,6 +38,9 @@
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="4ta-bm-3Ws" kind="presentation" id="HEB-Pw-ELN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -83,7 +86,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-326" y="4"/>
+        </scene>
+        <!--Logout View Controller-->
+        <scene sceneID="Wm4-8X-RX9">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="4ta-bm-3Ws" customClass="LogoutViewController" customModule="UserRegistration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pa1-Gr-ZHO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-Xw-pXV">
+                                <rect key="frame" x="157.66666666666666" y="646" width="78" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed" destination="4ta-bm-3Ws" eventType="touchUpInside" id="Sn4-ut-W1D"/>
+                                    <segue destination="jVl-8p-SVU" kind="unwind" unwindAction="unwindFor:" id="WY7-dO-Cs4"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bep-Rj-vRR">
+                                <rect key="frame" x="88.666666666666686" y="168" width="216" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNE-Cm-D6o">
+                                        <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP4-F2-rif">
+                                        <rect key="frame" x="149.66666666666669" y="0.0" width="66.333333333333314" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fzg-U3-Dy7"/>
+                        <color key="backgroundColor" red="0.89573111495930202" green="0.69450983459093107" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Fzg-U3-Dy7" firstAttribute="bottom" secondItem="4Ms-Xw-pXV" secondAttribute="bottom" constant="165" id="SaK-AN-aAy"/>
+                            <constraint firstItem="4Ms-Xw-pXV" firstAttribute="centerX" secondItem="pa1-Gr-ZHO" secondAttribute="centerX" id="SmJ-yJ-iWr"/>
+                            <constraint firstItem="Bep-Rj-vRR" firstAttribute="centerX" secondItem="pa1-Gr-ZHO" secondAttribute="centerX" id="dXq-A8-N3B"/>
+                            <constraint firstItem="Bep-Rj-vRR" firstAttribute="top" secondItem="Fzg-U3-Dy7" secondAttribute="top" constant="168" id="eZT-yY-vny"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="nP4-F2-rif" id="c01-fn-ltW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JzN-Vt-zW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jVl-8p-SVU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="452.67175572519085" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

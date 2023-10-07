@@ -13,6 +13,7 @@
 		65770DD12AD082FB001FB0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65770DCF2AD082FB001FB0F6 /* Main.storyboard */; };
 		65770DD32AD082FC001FB0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65770DD22AD082FC001FB0F6 /* Assets.xcassets */; };
 		65770DD62AD082FC001FB0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65770DD42AD082FC001FB0F6 /* LaunchScreen.storyboard */; };
+		65770DDE2AD16309001FB0F6 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65770DDD2AD16309001FB0F6 /* LogoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		65770DD22AD082FC001FB0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65770DD52AD082FC001FB0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65770DD72AD082FC001FB0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65770DDD2AD16309001FB0F6 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				65770DC92AD082FB001FB0F6 /* AppDelegate.swift */,
 				65770DCB2AD082FB001FB0F6 /* SceneDelegate.swift */,
 				65770DCD2AD082FB001FB0F6 /* LoginViewController.swift */,
+				65770DDD2AD16309001FB0F6 /* LogoutViewController.swift */,
 				65770DCF2AD082FB001FB0F6 /* Main.storyboard */,
 				65770DD22AD082FC001FB0F6 /* Assets.xcassets */,
 				65770DD42AD082FC001FB0F6 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				65770DCE2AD082FB001FB0F6 /* LoginViewController.swift in Sources */,
 				65770DCA2AD082FB001FB0F6 /* AppDelegate.swift in Sources */,
+				65770DDE2AD16309001FB0F6 /* LogoutViewController.swift in Sources */,
 				65770DCC2AD082FB001FB0F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,14 +13,41 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 10
     }
-
-    @IBAction func forgotUser() {
-        showAlert(with: "Oops!", and: "Your name is Tim")
-        
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        if let touch = touches.first,
+           touch.phase == .began {
+               view.endEditing(true)
+           }
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard userName.text == "Tim", userPassword.text == "abcd"
+        else { showAlert(with: "Wrong name or Password!", and: "Try again 😉")
+            userName.text = ""
+            userPassword.text = ""
+            return false
+        }
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let labelText = segue.destination as? LogoutViewController else
+        { return }
+        labelText.newLabel = userName.text
+    }
+
+    @IBAction func forgotUser() {
+        showAlert(with: "Oops!", and: "Your name is Tim 😉")
+    }
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your password is abcd")
+        showAlert(with: "Oops!", and: "Your password is abcd 😉")
+    }
+    
+    @IBAction func unwind(for segue:UIStoryboardSegue) {
+        userName.text = ""
+        userPassword.text = ""
     }
 }
 
